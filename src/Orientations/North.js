@@ -6,6 +6,6 @@ export default class North {
     }
 
     step(n = 1) {
-        return this.currentCoordinates.translate(0, n*-1)
+        return this.currentCoordinates.translate(0, n*1)
     }
 }

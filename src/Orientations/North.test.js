@@ -7,7 +7,7 @@ describe('When facing North starting at coordinate [0,0]', () => {
             let currentCoordinates = new Coordinates(0,0)
             let north = new North(currentCoordinates)   
 
-            expect(north.step(1)).toEqual(new Coordinates(0,-1))
+            expect(north.step(1)).toEqual(new Coordinates(0,1))
         })
     })
 })

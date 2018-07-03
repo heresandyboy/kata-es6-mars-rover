@@ -16,8 +16,8 @@ export default class West {
     step(n = 1) {
         console.log(`West stepped ${n}`)
         this.currentCoordinates = this.currentCoordinates.translate(n*-1, 0)
-        console.log(`translated x ${this.currentCoordinates .x}`)
-        console.log(`translated y ${this.currentCoordinates .y}`)
+        console.log('West stepped to:', this.currentCoordinates)
+   
         return this.currentCoordinates 
     }
 }

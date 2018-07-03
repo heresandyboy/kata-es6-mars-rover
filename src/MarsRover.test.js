@@ -16,25 +16,21 @@ describe('A mars rover', () => {
 
         describe('Orients west and steps', () => {
             let marsRover = new MarsRover()
-            marsRover = marsRover.orient('west').step()
             test('is at coordinates [-1,0]', () => {
+                marsRover = marsRover.orient('west').step()
                 expect(marsRover.coordinates()).toEqual(new Coordinates(-1, 0))
             })
 
-            describe('turns right', () => {
+            //turns right
+            test('turns right and is at same coordinates', () => {
                 marsRover = marsRover.turnRight()
-                test('is at same coordinates', () => {
-                    expect(marsRover.coordinates()).toEqual(new Coordinates(-1, 0))
-                })
+                expect(marsRover.coordinates()).toEqual(new Coordinates(-1, 0))
+            })
 
-                describe('steps two', () => {
-                    marsRover = marsRover.step(2)
-
-                    test('is at coordinates [-1,2]', () => {
-                        expect(marsRover.coordinates()).toEqual(new Coordinates(-1, 2))
-
-                    })
-                })
+            //steps two
+            test('steps two and is at coordinates [-1,2]', () => {
+                marsRover = marsRover.step(2)
+                expect(marsRover.coordinates()).toEqual(new Coordinates(-1, 2))
             })
         })
     })

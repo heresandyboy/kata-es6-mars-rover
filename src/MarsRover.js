@@ -19,9 +19,7 @@ export default class MarsRover {
     }
 
     step = (n = 1) => {
-        const newCoordinates = this.currentOrientation.step(n)
-        console.log(`NewCoordinates from Rover x ${newCoordinates.x}`)
-        console.log(`NewCoordinates from Rover y ${newCoordinates.y}`)
+        const newCoordinates = this.currentOrientation.step(n)      
         console.log('orientation after step', this.currentOrientation)
         return new MarsRover(newCoordinates, this.currentOrientation)
     }
