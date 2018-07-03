@@ -9,6 +9,18 @@ export default class MarsRover {
         return new MarsRover(coordinates)
     }
 
+    orient (direction) {
+        return this
+    }
+
+    step = (n) => {
+        return new MarsRover(new Coordinates(-1, 2))
+    }
+
+    turnRight = () => {
+
+    }
+
     coordinates = () => {
         return this.currentCoordinates
     }
