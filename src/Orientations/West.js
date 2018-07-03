@@ -1,4 +1,5 @@
 import North from "./North";
+import Coordinates from '../Coordinates'
 
 export default class West {
     constructor(initialCoordinates) {
@@ -6,10 +7,17 @@ export default class West {
     }
     
     turnRight() {
-        return new North()
+        let north = new North(this.currentCoordinates)
+        console.log('turn Right at ', this.currentCoordinates)
+        console.log(north)
+        return north
     }
 
     step(n = 1) {
-        return this.currentCoordinates.translate(n*-1, 0)
+        console.log(`West stepped ${n}`)
+        this.currentCoordinates = this.currentCoordinates.translate(n*-1, 0)
+        console.log(`translated x ${this.currentCoordinates .x}`)
+        console.log(`translated y ${this.currentCoordinates .y}`)
+        return this.currentCoordinates 
     }
 }
