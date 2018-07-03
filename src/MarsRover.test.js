@@ -21,18 +21,21 @@ describe('A mars rover', () => {
                 expect(marsRover.coordinates()).toEqual(new Coordinates(-1, 0))
             })
 
-            //turns right
-            test('turns right and is at same coordinates', () => {
+            describe('turns right', () => {
+            test('and is at same coordinates', () => {
                 marsRover = marsRover.turnRight()
                 expect(marsRover.coordinates()).toEqual(new Coordinates(-1, 0))
             })
+        })
 
+        describe('steps two', () => {
             //steps two
-            test('steps two and is at coordinates [-1,2]', () => {
+            test('and is at coordinates [-1,2]', () => {
                 marsRover = marsRover.step(2)
                 expect(marsRover.coordinates()).toEqual(new Coordinates(-1, 2))
             })
         })
+    })
     })
 
     describe('that starts at coordinates [1,1]', () => {
